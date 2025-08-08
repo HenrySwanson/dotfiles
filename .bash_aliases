@@ -1,7 +1,8 @@
 alias dotgit='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
-# quick shortcut for setting up the dotfiles repo
-alias makedotgit='git init --bare $HOME/.dotfiles && dotgit config status.showUntrackedFiles no && dotgit remote add origin https://github.com/HenrySwanson/dotfiles.git'
+# to set up the dotfiles repo:
+# git init --bare $HOME/.dotfiles
+# dotgit config status.showUntrackedFiles no
+# dotgit remote add origin https://github.com/HenrySwanson/dotfiles.git
 
 # on some devices (the windows ones) the following aliases are
 # useful for me
