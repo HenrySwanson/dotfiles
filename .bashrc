@@ -56,8 +56,15 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+# TODO: move this somewhere else? needs to be defined before prompt
+function parse_git_branch() {
+    git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/ (\1)/p'
+}
+
+# TODO: might be nice to have color function, but there's so
+# many laters of escaping here that it's hard to figure that out
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[36m\][\t] \[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[36m\][\t] \[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00;33m\]$(parse_git_branch)\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}[\t] \u@\h:\w\$ '
 fi
