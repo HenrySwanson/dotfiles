@@ -1,4 +1,10 @@
 # This is Git's per-user configuration file.
+
+# README: Here is how to setup the dotgit repo
+# git clone https://github.com/HenrySwanson/dotfiles.git --bare $HOME/.dotfiles
+# source .bash_aliases
+# dotgit config status.showUntrackedFiles no
+
 [user]
 # Please adapt and uncomment the following lines:
 name = Henry Swanson
