@@ -9,3 +9,6 @@
 # Please adapt and uncomment the following lines:
 name = Henry Swanson
 email = henryswanson94@gmail.com
+
+[alias]
+    dog = log --decorate --oneline --graph
