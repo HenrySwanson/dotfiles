@@ -119,8 +119,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+test -f "$HOME/.local/bin/env" && . "$HOME/.local/bin/env"
+test -f "$HOME/.cargo/env" && . "$HOME/.cargo/env"
+
 # enable completion for jujutsu
 source <(COMPLETE=bash jj)
 
-test -f "$HOME/.local/bin/env" && . "$HOME/.local/bin/env"
-test -f "$HOME/.cargo/env" && . "$HOME/.cargo/env"
