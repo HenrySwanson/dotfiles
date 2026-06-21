@@ -119,5 +119,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# enable completion for jujutsu
+source <(COMPLETE=bash jj)
 
-. "$HOME/.local/bin/env"
+test -f ~/.local/bin/env && . ~/.local/bin/env
